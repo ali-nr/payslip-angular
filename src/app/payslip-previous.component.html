@@ -1,0 +1,25 @@
+<div>
+  <table style="margin-top:50px;" class="table table-striped">
+    <tbody>
+      <tr *ngFor="let payslip of payslips">
+        <th scope="row">First name:</th>
+        <td>{{payslip.first_name}}</td>
+        <th scope="row">Last name:</th>
+        <td>{{payslip.last_name}}</td>
+        <th scope="row">Annual income:</th>
+        <td>{{payslip.annual_income}}</td>
+        <th scope="row">Gross income:</th>
+        <td>{{payslip.gross_income}}</td>
+        <th scope="row">income tax:</th>
+        <td>{{payslip.income_tax}}</td>
+        <th scope="row">Net income:</th>
+        <td>{{payslip.net_income}}</td>
+        <th scope="row">Super:</th>
+        <td>{{payslip.super}}</td>
+        <th scope="row">Pay:</th>
+        <td>{{payslip.pay}}</td>
+      </tr>
+      <tr>
+    </tbody>
+  </table>
+</div>

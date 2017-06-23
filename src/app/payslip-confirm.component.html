@@ -1,0 +1,48 @@
+<div class="row justify-content-center">
+  <div class="col-6">
+    <h1>Payslip</h1>
+    <h3>{{firstname}} {{lastname}}</h3>
+    <table style="margin-top:50px;" class="table table-striped">
+      <tbody>
+        <tr>
+          <th scope="row">Pay Date</th>
+          <td>{{payslip.payDate | date:'dd/mm/y'}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Pay Frequency</th>
+          <td>{{payslip.payFrequency}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Annual Income</th>
+          <td>{{ payslip.annualIncome | currency: 'USD':true}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Gross Income</th>
+          <td>{{payslip.grossIncome | currency: 'USD':true}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Income Tax</th>
+          <td>{{payslip.incomeTax | currency: 'USD':true}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Net Income</th>
+          <td>{{payslip.netIncome | currency: 'USD':true}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Super</th>
+          <td>{{payslip.super | currency: 'USD':true}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Pay</th>
+          <td>{{payslip.pay | currency: 'USD':true}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <p *ngIf="payslipCreationMessage"></p>
+    </div>
+    <div class="form-group row justify-content-end" (click)="pay()">
+      <button style="margin-right: 15px" href="#" class="btn btn-primary">Pay</button>
+    </div>
+  </div>
+</div>
